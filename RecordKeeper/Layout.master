@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Layout.master.cs" Inherits="Site_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Record Keeper</title>
+    <link href="Design/Main.css" rel="stylesheet" />
+    <script src="Design/Validations.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>my layout</title>
+        <link rel="stylesheet" type="text/css" href="my.css" />
+    </head>
+    <body>
+
+        <header id="header" runat="server">
+            <h1>Record Keeping System</h1>
+            <div style="float: left">
+            </div>
+
+            <div style="float: right; margin: 25px 25px 5px 5px; color:#ffffff">
+                <asp:Panel ID="pnl1" runat="server">
+                    <asp:HyperLink ID="hpLogout" runat="server" NavigateUrl="Login.aspx" Visible="false">Logout</asp:HyperLink>
+                    <asp:HyperLink ID="hpLogin" runat="server" NavigateUrl="Login.aspx">Login</asp:HyperLink>
+                </asp:Panel>               
+            </div>
+
+        </header>
+
+        <nav id="nav">
+            <ul>
+                <li><a href="MainPage.aspx">Home</a></li>
+                <li><a href="About.aspx">About</a></li>
+                <li><a href="Articles.aspx">Article</a></li>
+                <li><a href="Contact.aspx">Contact</a></li>
+
+            </ul>
+
+
+        </nav>
+
+        <%--    <aside id="side">
+            <h1>News DashBoard</h1>
+            <div>
+                <a href="#">
+                    <p>Keeping Notice</p>
+                </a>
+                <a href="#">
+                    <p>Learn New</p>
+                </a>
+                <a href="#">
+                    <p>Demo Record</p>
+                </a>
+            </div>
+
+        </aside>--%>
+
+
+        <div id="con">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" ClientIDMode="Static">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <footer id="footer">
+            copyright @amity.timalsina@gmail.com
+     
+        </footer>
+    </body>
